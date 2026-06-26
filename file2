@@ -1,0 +1,209 @@
+--- Page 1 ---
+fileTo get the cpu information
+Lscpuinfo
+
+Cat /proc/cpuinfo
+
+Sudo -i : to switch from ec2-user to root user
+
+Sudo su - : to switch from ec2-user to root user
+Logout or ctrl+d : to switch from root user to ec2-user
+
+Cat /proc/meminfo or Ismem :to sho the memory information
+
+Fdisk -I or Isblk :to show to the volume information
+Ifconfig /ip addr / hostname -i\ ip addr show
+
+Linux commands:
+
+touch file : to create a file
+
+1s/11 : to show list of files
+
+cat filel : to show the content
+
+cat>>file1 : to insert the content
+
+enter ctrl d : to save and exit form file
+
+cp file1 file2 : copies the content form file1 to file2
+file1 file2 : to renmae file1 to file2
+filel : to remove a file
+file1 -f : to remove a file forcefully
+
+rm * -f£ : to remove all files forcefully
+
+touch file{1. 7100}: to create 100 files at a time
+
+cat filel >>file2 : to copy content from file1 to file2 (without overriding)
+
+HOW TO CHECK THE SERVER PERFOMANCE:
+top
+htop : yum install htop -y
+
+head file1 shows first 10 lines a file
+
+head -5 filel shows first 5 lines a file
+
+head -15 filel shows first 15 lines a file
+
+tail filel shows bottom 10 lines a file
+
+tail -5 filel shows bottom 5 lines a file
+
+tail -15 filel shows bottom 15 lines a file
+
+sed -n '5,15p' file1l: to print line 5 to 15
+
+wc : to show lines, words and charcters.
+
+
+
+--- Page 2 ---
+EDITORS: jto edit the tiles.
+
+types:
+1. VIM/vi
+2. nano
+
+: to insert the content
+: to come outof inster mode
+
+. command mode
+. insert mode
+. save mode
+
+- SAVE MODE:
+: to save
+: to quit
+save and quit
+
+save and quit
+:wq! : save and quit forcefully
+
+2. INSERT MODE:
+
+i : to insert command
+
+A : end of line
+
+I : starting of line
+
+fo) create new line above existing
+
+fe) : to create new line below existing.
+
+- COMMAND MODE:
+
+gg : top of file
+
+shift g : bottom of file
+
+:set number: to show number of lines inside file
+:n : to go to speicif line
+
+Windows (CRLF)
+
+
+
+--- Page 3 ---
+gg : top of file
+
+shift g : bottom of file
+
+:set number: to show number of lines inside file
+2n : to go to speicif line
+yy : to copy a line
+
+10yy : to copy 10 lines
+
+8) : to paste
+
+Spp : to paste 5 times
+
+dd : to delete
+
+10 dd : to delete 10 lines
+
+u : undo
+
+ctrl r_ : redo
+
+/word : to search for a word
+
+PERMISSIONS:
+
+read a
+write : W
+executable: x
+
+user: rw-
+group: r--
+others: r--
+
+1. numerical method: chmod 777 filel
+
+2. METHOD IS ALPHABETICAL METHOD :CHMOD u=rwx,g=rx,,o=rwx f1
+
+
+
+--- Page 4 ---
+GREP: Global regular expression print
+to search the words in a file.
+
+grep raham file1: to search for raham word
+
+grep raham filel -i: to search for raham word (-i: avoid case sensitive)
+grep raham filel -ic: to count for raham word (-c: count)
+
+grep raham filel -v: to print lines without raham word (-v: aviod)
+
+grep ‘word1\|word2\|word3' file1
+
+cat file1 | grep raham :
+
+| : pipe symbol: here 1st commnd is the input for second command.
+
+SED: STREAM EDITOR
+to used to replace the words in file.
+
+sed 's/wordi/word2/' file1 : to replace word1 with word2
+
+sed 's/devops/aws/;s/hyd/mumbai/' file1l : to replace multipe words
+sed '2c abc’ filel : to replace a line
+
+sed -n ‘'5,12p' filel : to print from line 5 to 12
+
+sed -n '10p' filel : to print line 10
+
+inside file:
+
+:%s/word1/word2/ : to replace word1 with word2
+
+:>%s/word1/word2/g : to replace word1 with word2 if we have repeted words
+Inside the file
+:‘%s/devops/aws/
+
+useradd raham
+cat /etc/passwd : to list users
+passwd raham : to set password
+
+1. it will not be exposed.
+2. username will not be given as password.
+3. min 8 charc
+
+
+
+--- Page 5 ---
+NORMAL USER TO SUPER USER:
+
+useradd raham
+passwd raham
+
+visudo -- > :100 -- > yy & p -- > root=raham -- > save
+Su - raham
+sudo useradd vijay
+
+Su - teja
+321456987
+
